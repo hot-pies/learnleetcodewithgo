@@ -2,16 +2,23 @@ package main
 
 import (
 	"fmt"
-	"golearning/learnleetcode/medianofarray"
+	"golearning/learnleetcode/longestpalindromicsubstring"
 )
 
 func main() {
-
-	// fmt.Println(medianofarray.FindMedianSortedArrays([]int{1, 3}, []int{2}))
-	// fmt.Println(medianofarray.FindMedianSortedArrays([]int{1, 2}, []int{3, 4, 8, 9}))
-	// fmt.Println(medianofarray.FindMedianSortedArrays([]int{0}, []int{0}))
-	fmt.Println(medianofarray.FindMedianSortedArrays([]int{2, 2, 4, 4}, []int{2, 2, 4, 4}))
+	// fmt.Println(longestpalindromicsubstring.LongestPalindrome("babad"))
+	// fmt.Println(longestpalindromicsubstring.LongestPalindrome("cbbd"))
+	fmt.Println(longestpalindromicsubstring.LongestPalindrome("banana"))
 }
+
+// FindMedianSortedArrays
+// func main() {
+
+// fmt.Println(medianofarray.FindMedianSortedArrays([]int{1, 3}, []int{2}))
+// fmt.Println(medianofarray.FindMedianSortedArrays([]int{1, 2}, []int{3, 4, 8, 9}))
+// fmt.Println(medianofarray.FindMedianSortedArrays([]int{0}, []int{0}))
+// fmt.Println(medianofarray.FindMedianSortedArrays([]int{2, 2, 4, 4}, []int{2, 2, 4, 4}))
+// }
 
 // func main() {
 // 	fmt.Println(longestsustring.LengthOfLongestSubstring("abcabcbb"))
