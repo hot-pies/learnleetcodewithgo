@@ -1,0 +1,91 @@
+package main
+
+import (
+	"fmt"
+)
+
+type stack []string
+
+func (s *stack) push(e string) {
+	*s = append(*s, e)
+	// fmt.Println(s)
+}
+
+func (s *stack) pop() string {
+	if s.isEmpty() {
+		return ""
+	}
+
+	top := (*s)[len(*s)-1]
+	// fmt.Println(top)
+	*s = (*s)[:len(*s)-1]
+	// fmt.Println(s)
+	return top
+}
+
+func (s *stack) isEmpty() bool {
+	return len(*s) == 0
+}
+
+func IsValid(s string) bool {
+
+	// fmt.Println(" array = ", s)
+	if len(s) < 1 {
+		return false
+	}
+
+	var stack = &stack{}
+	isValid := false
+	chars := []rune(s)
+	for i := range chars {
+		if string(chars[i]) == "(" {
+			stack.push(string(chars[i]))
+		} else if string(chars[i]) == ")" {
+			if !stack.isEmpty() && i > 0 {
+				c := stack.pop()
+				fmt.Println("Pop ()", c, " comp to ", string(chars[i]))
+				if string(chars[i-1]) == c {
+					isValid = true
+				} else {
+					return false
+				}
+			} else {
+				return false
+			}
+			fmt.Println("validate () ", isValid)
+		} else if string(chars[i]) == "[" {
+			stack.push(string(chars[i]))
+		} else if string(chars[i]) == "]" {
+			if !stack.isEmpty() && i > 0 {
+				c := stack.pop()
+				fmt.Println("Pop []", c, " Comp ", string(chars[i]))
+				if string(chars[i-1]) == c {
+					isValid = true
+				} else {
+					return false
+				}
+			} else {
+				return false
+			}
+			fmt.Println("validate [] ", isValid)
+		} else if string(chars[i]) == "{" {
+			stack.push(string(chars[i]))
+		} else if string(chars[i]) == "}" {
+			if !stack.isEmpty() && i > 0 {
+				c := stack.pop()
+				fmt.Println("Pop []", c, " check open & close parentheses ", string(chars[i-1]))
+				if string(chars[i-1]) == c {
+					isValid = true
+				} else {
+					return false
+				}
+			} else {
+				return false
+			}
+			fmt.Println("validate {} ", isValid)
+		} else {
+			return false
+		}
+	}
+	return isValid
+}
