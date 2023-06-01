@@ -4,6 +4,13 @@ import (
 	"fmt"
 )
 
+func main() {
+
+	FindDifference([]int{1, 2, 3}, []int{2, 4, 6})
+	FindDifference([]int{1, 2, 3}, []int{3, 2, 6})
+	FindDifference([]int{1, 2, 3, 3}, []int{1, 1, 2, 2})
+}
+
 func FindDifference(nums1 []int, nums2 []int) [][]int {
 
 	fmt.Printf("Array 1 : %v Array 2 : %v\n\n", nums1, nums2)

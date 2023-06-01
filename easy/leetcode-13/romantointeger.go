@@ -1,5 +1,14 @@
 package main
 
+import "fmt"
+
+func main() {
+	// fmt.Println(RomanToInt("III"))
+	// fmt.Println(RomanToInt("LVIII"))
+	fmt.Println(RomanToInt("MCMXCIV"))
+
+}
+
 func RomanToInt(s string) int {
 
 	roman := make(map[string]int)

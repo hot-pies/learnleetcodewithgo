@@ -4,6 +4,10 @@ import (
 	"fmt"
 )
 
+func main() {
+	PlusOne([]int{1, 2, 3, 9})
+}
+
 func PlusOne(arr []int) []int {
 	fmt.Println("Plus One ", arr)
 

@@ -4,6 +4,13 @@ import (
 	"fmt"
 )
 
+func main() {
+
+	fmt.Println(RemoveDuplicates([]int{1, 1, 2, 2, 3, 3, 3}))
+	fmt.Println(RemoveDuplicates([]int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}))
+
+}
+
 func RemoveDuplicates(nums []int) int {
 	fmt.Println("Replace Duplicate from array", nums)
 

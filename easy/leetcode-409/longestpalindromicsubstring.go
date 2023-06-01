@@ -1,6 +1,12 @@
-package longestpalindromicsubstring
+package main
 
 import "fmt"
+
+func main() {
+	// fmt.Println(longestpalindromicsubstring.LongestPalindrome("babad"))
+	// fmt.Println(longestpalindromicsubstring.LongestPalindrome("cbbd"))
+	fmt.Println(LongestPalindrome("banana"))
+}
 
 func LongestPalindrome(s string) string {
 

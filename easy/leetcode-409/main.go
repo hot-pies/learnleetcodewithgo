@@ -1,15 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"golearning/learnleetcode/longestpalindromicsubstring"
-)
-
-func main() {
-	// fmt.Println(longestpalindromicsubstring.LongestPalindrome("babad"))
-	// fmt.Println(longestpalindromicsubstring.LongestPalindrome("cbbd"))
-	fmt.Println(longestpalindromicsubstring.LongestPalindrome("banana"))
-}
+// "golearning/learnleetcode/easy/leetcode-409/longestpalindromicsubstring"
 
 // FindMedianSortedArrays
 // func main() {
