@@ -2,23 +2,40 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
 
 func main() {
-	PlusOne([]int{1, 2, 3, 9})
+	fmt.Print(PlusOne([]int{1, 2, 9, 9}))
 }
 
 func PlusOne(arr []int) []int {
-	fmt.Println("Plus One ", arr)
 
-	plus := 1
-	if len(arr) == 1 {
-		return []int{arr[0] + plus}
+	fmt.Println(arr)
+
+	number := ""
+
+	for i := 0; i < len(arr); i++ {
+		temp := fmt.Sprint(arr[i])
+		number = number + temp
 	}
 
-	if 10-arr[len(arr)-1] == 1 {
-		fmt.Println(arr[len(arr)-1])
+	temp, _ := strconv.Atoi(number)
+
+	temp = temp + 1
+
+	number = fmt.Sprint(temp)
+
+	// fmt.Println(number)
+
+	digit := []int{}
+
+	for i := range number {
+		temp, _ := strconv.Atoi(string(number[i]))
+		// fmt.Println(temp)
+		digit = append(digit, temp)
 	}
 
-	return []int{}
+	// fmt.Print(digit)
+	return digit
 }
