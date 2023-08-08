@@ -25,6 +25,5 @@ func isPalindrome(x int) bool {
 			return false
 		}
 	}
-
 	return true
 }
