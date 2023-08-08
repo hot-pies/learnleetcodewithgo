@@ -29,16 +29,6 @@ class Solution(object):
             elif sum==0 and carry==1:
                 result+="1"
                 carry=0
-            # else:
-            #     result="1"
-            # if carry %2==0:
-                
-            #     print("if ",result)
-            #     carry=1
-            # else:
-            #     result=result+str(carry)
-            #     print("else ",result)
-
 
             print("Result : ", result)
             # print("old carry : ", carry)
