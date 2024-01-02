@@ -38,4 +38,4 @@ class Solution(object):
         return right
 
 sq = Solution()
-sq.mySqrt(144)
+sq.mySqrt(8)
